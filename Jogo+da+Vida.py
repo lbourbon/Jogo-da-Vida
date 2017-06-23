@@ -1,7 +1,4 @@
-
 # coding: utf-8
-
-# In[1]:
 
 '''JOGO DA VIDA ('John Conway´s Game of Life' por Lécio Bourbon)  para Jupyter Notebook
 É um automato que tem por objetivo provar que a regras simples podem dar origem a mecanismos complexos'''
@@ -12,7 +9,7 @@ from IPython.display import clear_output
 
 # -> MODIFIQUE O GRID ABAIXO COMO QUISER
 # -> 1 SIGNIFICA CÉLULA VIVA
-# -> 2 SIGNIFICA CÉLULA MORTA
+# -> 0 SIGNIFICA CÉLULA MORTA
 
 grid = [
     [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
@@ -38,8 +35,6 @@ grid = [
 ]
 
 
-# In[ ]:
-
 def conta_vizinhos(grid, x, y):
     return sum(grid[x-1][y-1:y+2]) + sum(grid[x][y-1:y+2]) + sum(grid[x+1][y-1:y+2]) - grid[x][y]
 
@@ -60,8 +55,6 @@ Qualquer célula viva com dois ou três vizinhos vivos continua no mesmo estado 
                 
     return temp
 
-
-# In[ ]:
 
 gerações = int(input('Escolha o número de gerações. (ex: 100) '))
 velocidade = int(input('Escolha a velocidade, de 1 a 10:  '))
