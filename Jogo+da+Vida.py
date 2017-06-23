@@ -7,9 +7,7 @@ from time import sleep
 from copy import deepcopy
 from IPython.display import clear_output
 
-# -> MODIFIQUE O GRID ABAIXO COMO QUISER
-# -> 1 SIGNIFICA CÉLULA VIVA
-# -> 0 SIGNIFICA CÉLULA MORTA
+#-> MODIFIQUE O GRID ABAIXO COMO QUISER,  1 SIGNIFICA CÉLULA VIVA,  0 SIGNIFICA CÉLULA MORTA
 
 grid = [
     [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
@@ -39,10 +37,7 @@ def conta_vizinhos(grid, x, y):
     return sum(grid[x-1][y-1:y+2]) + sum(grid[x][y-1:y+2]) + sum(grid[x+1][y-1:y+2]) - grid[x][y]
 
 def aplica_regras(grid):
-    '''REGRAS: Qualquer célula viva com menos de dois vizinhos vivos morre de solidão
-Qualquer célula viva com mais de três vizinhos vivos morre de superpopulação.
-Qualquer célula morta com exatamente três vizinhos vivos se torna uma célula viva.
-Qualquer célula viva com dois ou três vizinhos vivos continua no mesmo estado para a próxima geração.'''
+    ''' Aplica as regras do Jogo da Vida. Ler readme'''
     temp = deepcopy(grid)
     for i in range(1, len(grid)-1):
         for j in range(1, len(grid[0])-1):
