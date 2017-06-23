@@ -1,4 +1,5 @@
-# JOGO DA VIDA ('John Conway´s Game of Life' por Lécio Bourbon) em Python3 para ser executado em Jupyter Notebook (.ipynb)
+# JOGO DA VIDA ('John Conway´s Game of Life' por Lécio Bourbon) 
+em Python3 para ser executado em Jupyter Notebook (.ipynb)
 
 
 É um automato que tem por objetivo provar que regras simples podem dar origem a mecanismos complexos'''
